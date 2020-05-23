@@ -93,9 +93,14 @@ function Home() {
               <Row>
                 {renderBlogPosts}
               </Row>
-              <h5 className="text-center">
-                  <a href="/blog">Więcej wpisów</a>
-                </h5>
+              <Button
+                  className="btn-round"
+                  color="info"
+                  href="/blog"
+                  onClick={e => e.preventDefault()}
+                >
+                Więcej wpisów
+              </Button>
             </Container>
           </Container>
         </div>
