@@ -40,23 +40,35 @@ function LandingPageHeader() {
     }
   });
 
+  const content = (<><Container>
+    <div className="motto text-center main-header">
+      <h1>Kamień i Co?</h1>
+      <h3>Ratujemy warszawskie zabytki</h3>
+    </div>
+  </Container>
+  <div className="filter" /></>)
+
   return (
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/background.jpg") + ")"
+          backgroundImage: "url(" + require("assets/img/background-mobile.jpg") + ")"
         }}
-        className="page-header"
+        className="page-header page-header-mobile"
         data-parallax={true}
         ref={pageHeader}
       >
-        <div className="filter" />
-        <Container>
-          <div className="motto text-center">
-            <h1>Kamień i Co?</h1>
-            <h3>Chronimy warszawskie zabytki</h3>
-          </div>
-        </Container>
+        {content}
+      </div>
+      <div
+        style={{
+          backgroundImage: "url(" + require("assets/img/background.jpg") + ")"
+        }}
+        className="page-header page-header-desktop"
+        data-parallax={true}
+        ref={pageHeader}
+      >
+        {content}
       </div>
     </>
   );
