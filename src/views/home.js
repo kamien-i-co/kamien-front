@@ -59,7 +59,7 @@ function Home() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">Let's talk product</h2>
+                <h2 className="title">O stowarzyszeniu</h2>
                 <h5 className="description">
                   This is the paragraph where you can write more details about
                   your product. Keep you user engaged by providing meaningful
@@ -74,12 +74,15 @@ function Home() {
                   href="#pablo"
                   onClick={e => e.preventDefault()}
                 >
-                  See Details
+                  Więcej
                 </Button>
               </Col>
             </Row>
+            
             <br />
             <br />
+            <Container>
+            <h2 className="title">Nasze Działania</h2>
             <Row>
               <Col md="3">
                 <div className="info">
@@ -87,7 +90,7 @@ function Home() {
                     <i className="nc-icon nc-album-2" />
                   </div>
                   <div className="description">
-                    <h4 className="info-title">Beautiful Gallery</h4>
+                    <h4 className="info-title">Ochrona Zabytków</h4>
                     <p className="description">
                       Spend your time generating new ideas. You don't have to
                       think of implementing.
@@ -150,6 +153,7 @@ function Home() {
                 </div>
               </Col>
             </Row>
+            </Container>
           </Container>
         </div>
         <div className="section section-dark text-center">
