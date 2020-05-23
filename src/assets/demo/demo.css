@@ -644,9 +644,9 @@
 
 @media only screen and (max-width: 599px) {
   .main-header {
-    margin-top: 15vh;
+    margin-top: 20vh;
   }
-  .page-header-desktpo {
+  .page-header-desktop {
     display: none;
   }
 }
