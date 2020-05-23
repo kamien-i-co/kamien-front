@@ -58,12 +58,6 @@ function LandingPageHeader() {
           </div>
         </Container>
       </div>
-      <div
-        className="moving-clouds"
-        style={{
-          backgroundImage: "url(" + require("assets/img/clouds.png") + ")"
-        }}
-      />
     </>
   );
 }
