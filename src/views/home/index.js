@@ -40,7 +40,8 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-import {description, activities } from './index.data';
+import {description, activities, posts } from './index.data';
+import BlogPost from './BlogPost';
 import Activity from './Activity'
 
 function Home() {
@@ -53,6 +54,7 @@ function Home() {
   });
 
   const renderActivities = activities.map((a) => <Col md="3"><Activity activity={a}/></Col>)
+  const renderBlogPosts = posts.map((p) => <Col md="4"><BlogPost post={p}/></Col>)
   return (
     <>
       <IndexNavbar />
@@ -81,10 +83,19 @@ function Home() {
             <br />
             <br />
             <Container>
-            <h2 className="title">Nasze Działania</h2>
-            <Row>
-              {renderActivities}
-            </Row>
+              <h2 className="title">Nasze Działania</h2>
+              <Row>
+                {renderActivities}
+              </Row>
+            </Container>
+            <Container>
+              <h2 className="title">Najnowsze wpisy na blogu</h2>
+              <Row>
+                {renderBlogPosts}
+              </Row>
+              <h5 className="text-center">
+                  <a href="/blog">Więcej wpisów</a>
+                </h5>
             </Container>
           </Container>
         </div>
