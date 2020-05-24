@@ -40,19 +40,19 @@ function LandingPageHeader() {
     }
   });
 
-  const content = (<><Container>
+  const content = (<>
+  {/* <Container>
     <div className="motto text-center main-header">
-      <h1>Kamień i Co?</h1>
       <h3>Ratujemy warszawskie zabytki</h3>
     </div>
-  </Container>
+  </Container> */}
   <div className="filter" /></>)
 
   return (
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/background-mobile.jpg") + ")"
+          backgroundImage: "url(" + require("assets/img/background-mobile.jpg") + ")",
         }}
         className="page-header page-header-mobile"
         data-parallax={true}
@@ -62,7 +62,7 @@ function LandingPageHeader() {
       </div>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/background.jpg") + ")"
+          backgroundImage: "url(" + require("assets/img/background.jpg") + ")",
         }}
         className="page-header page-header-desktop"
         data-parallax={true}

@@ -26,11 +26,13 @@ import "assets/scss/paper-kit.scss";
 import "assets/demo/demo.css";
 // pages
 import Home from "views/home/index.js";
+import About from "views/about/index";
 // others
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
+    <Route path="/about-us" render={props => <About {...props} />} />
       <Route path="/" render={props => <Home {...props} />} />
     </Switch>
   </BrowserRouter>,

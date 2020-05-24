@@ -38,7 +38,7 @@ function IndexHeader() {
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">Kamień i Co?</h1>
+              <h1 className="presentation-title">Chronimy warszawskie zabytki</h1>
             </div>
             <h2 className="presentation-subtitle text-center">
               Chronimy warszawskie zabytki

@@ -19,6 +19,7 @@
 import React from "react";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -28,7 +29,7 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Container
+  Container,
 } from "reactstrap";
 
 function IndexNavbar() {
@@ -71,7 +72,6 @@ function IndexNavbar() {
             target="_blank"
             title="Coded by Creative Tim"
           >
-            Kamień i Co?
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
@@ -92,9 +92,34 @@ function IndexNavbar() {
         >
           <Nav navbar>
             <NavItem>
+              <NavLink to="/" tag={Link}>
+                Strona Główna
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/about-us" tag={Link}>
+                O nas
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/activities" tag={Link}>
+                Nasze Działania
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/blog" tag={Link}>
+                Blog
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/contact-us" tag={Link}>
+                Kontakt
+              </NavLink>
+            </NavItem>
+            <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                href="https://www.facebook.com/kamienicowarszawa/"
                 target="_blank"
                 title="Like us on Facebook"
               >
@@ -105,7 +130,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                href="https://www.instagram.com/kamien_i_co/"
                 target="_blank"
                 title="Follow us on Instagram"
               >
@@ -116,7 +141,7 @@ function IndexNavbar() {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial/paper-kit-react?ref=creativetim"
+                href="https://github.com/kamien-i-co"
                 target="_blank"
                 title="Star on GitHub"
               >
