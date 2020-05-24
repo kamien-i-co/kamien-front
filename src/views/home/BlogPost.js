@@ -17,12 +17,11 @@ function BlogPost({post}) {
         />
       <CardBody>
         <div className="author">
-            <CardTitle tag="h4">{post.title}</CardTitle>
+            <CardTitle tag="h4"><a href="#">{post.title}</a></CardTitle>
         </div>
         <p className="card-description text-center">
         {post.shortDescription}
         </p>
-        <a>Więcej...</a>
       </CardBody>
     </Card>);
 }

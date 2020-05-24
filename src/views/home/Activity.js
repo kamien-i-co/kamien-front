@@ -1,11 +1,5 @@
 import React from "react";
 
-
-// reactstrap components
-import {
-    Button
-  } from "reactstrap";
-
 function Activity({activity}) {
     return (<div className="info">
         <div className={`icon ${activity.icon}`}>
@@ -16,9 +10,6 @@ function Activity({activity}) {
         <p className="description">
             {activity.description}
         </p>
-        <Button className="btn-link" color="info" href={`/activities#${activity.id}`}>
-            Więcej
-        </Button>
         </div>
     </div>);
 }
