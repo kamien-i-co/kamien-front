@@ -41,30 +41,27 @@ function LandingPageHeader() {
   });
 
   const content = (<>
-  {/* <Container>
+  <Container>
     <div className="motto text-center main-header">
-      <h3>Ratujemy warszawskie zabytki</h3>
+      {/* <h1>Kamień i Co?</h1> */}
+      {/* <h3>Ratujemy warszawskie zabytki</h3> */}
+      <h1>Ratujemy warszawskie zabytki</h1>
+      {/* <h3>Start designing your landing page here.</h3> */}
+      <br />
+      <Button className="btn-round" color="neutral" type="button" outline>
+        Dowiedz się więcej
+      </Button>
     </div>
-  </Container> */}
-  <div className="filter" /></>)
+  </Container>
+  <div className="filter filter-landing" /></>)
 
   return (
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/background-mobile.jpg") + ")",
-        }}
-        className="page-header page-header-mobile"
-        data-parallax={true}
-        ref={pageHeader}
-      >
-        {content}
-      </div>
-      <div
-        style={{
           backgroundImage: "url(" + require("assets/img/background.jpg") + ")",
         }}
-        className="page-header page-header-desktop"
+        className="page-header"
         data-parallax={true}
         ref={pageHeader}
       >

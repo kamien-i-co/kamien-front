@@ -59,8 +59,6 @@ function Home() {
     <>
       <IndexNavbar />
       <LandingPageHeader />
-
-      
       <div className="main">
         <div className="section text-center">
           <Container>

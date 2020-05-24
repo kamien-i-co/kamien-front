@@ -72,6 +72,7 @@ function IndexNavbar() {
             target="_blank"
             title="Coded by Creative Tim"
           >
+            Kamień i Co?
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}

@@ -642,25 +642,10 @@
   }
 }
 
-@media only screen and (max-width: 599px) {
-  .main-header {
-    margin-bottom: 10vh;
-  }
-  .page-header-desktop {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .main-header {
-    margin-bottom: 20vh;
-  }
-  .page-header-mobile {
-    display: none;
-  }
-}
-
 .page-header {
-  align-items: flex-end;
-  min-height: 75vh;
+  align-items: center;
+}
+
+.filter-landing::after {
+  background-color: rgba(0,0,0,.75) !important;
 }
