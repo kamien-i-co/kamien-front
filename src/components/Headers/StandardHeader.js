@@ -23,7 +23,7 @@ import { Container } from "reactstrap";
 
 // core components
 
-function AboutUsPageHeader() {
+function StandardHeader({img, text}) {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -45,7 +45,7 @@ function AboutUsPageHeader() {
       <div
         style={{
           backgroundImage:
-            "url(" + require("assets/img/aboutus.jpg") + ")"
+            "url(" + require(`assets/img/${img}`) + ")"
         }}
         className="page-header page-header-xs"
         data-parallax={true}
@@ -53,7 +53,7 @@ function AboutUsPageHeader() {
       >
         <Container>
           <div className="motto text-center main-header">
-            <h2>O nas</h2>
+            <h2>{text}</h2>
           </div>
         </Container>
         <div className="filter" />
@@ -62,4 +62,4 @@ function AboutUsPageHeader() {
   );
 }
 
-export default AboutUsPageHeader;
+export default StandardHeader;

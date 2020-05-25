@@ -10,8 +10,7 @@ import {
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import AboutUsPageHeader from "components/Headers/AboutUsPageHeader.js";
+import StandardHeader from "components/Headers/StandardHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import { assHistory } from "./index.data";
 
@@ -26,7 +25,7 @@ function ProfilePage() {
   return (
     <>
       <IndexNavbar />
-      <AboutUsPageHeader />
+      <StandardHeader text="O Nas" img="aboutus.jpg"/>
       <div className="section profile-content">
         <Container>
             <Row className="mt-5">
