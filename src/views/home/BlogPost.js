@@ -8,6 +8,8 @@ import {
     CardTitle,
   } from "reactstrap";
 
+
+// TODO: fix text color
 function BlogPost({post}) {
     return (
     <Card className="card-profile card-plain">
