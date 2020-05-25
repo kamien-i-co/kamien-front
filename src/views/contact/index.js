@@ -18,7 +18,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import StandardHeader from "components/Headers/StandardHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 
-function ProjectsPage() {
+function ContactUsPage() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -51,4 +51,4 @@ function ProjectsPage() {
   );
 }
 
-export default ProjectsPage;
+export default ContactUsPage;
