@@ -53,7 +53,7 @@ function Home() {
   const renderBlogPosts = posts.map((p) => <Col md="4"><BlogPost post={p}/></Col>)
   return (
     <>
-      <IndexNavbar />
+      <IndexNavbar landing />
       <LandingPageHeader />
       <div className="main">
         <div className="section text-center">

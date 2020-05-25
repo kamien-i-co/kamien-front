@@ -32,7 +32,17 @@ import {
   Container,
 } from "reactstrap";
 
-function IndexNavbar() {
+const landingPageScroll = () => document.documentElement.scrollTop > 299 ||
+  document.body.scrollTop > 299;
+const landingElif = () => document.documentElement.scrollTop < 300 ||
+document.body.scrollTop < 300;
+
+const standardScrollCondition = () => document.documentElement.scrollTop > 99 ||
+document.body.scrollTop > 99;
+const standardElifCondition = () => document.documentElement.scrollTop < 100 ||
+document.body.scrollTop < 100
+
+function IndexNavbar({landing}) {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
@@ -40,17 +50,18 @@ function IndexNavbar() {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
   };
+  
+  const scrollCondition = () => landing ? landingPageScroll() : standardScrollCondition();
+  const scrollElifCondition = () => landing ? landingElif() : standardElifCondition();
 
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 299 ||
-        document.body.scrollTop > 299
+        scrollCondition()
       ) {
         setNavbarColor("");
       } else if (
-        document.documentElement.scrollTop < 300 ||
-        document.body.scrollTop < 300
+        scrollElifCondition()
       ) {
         setNavbarColor("navbar-transparent");
       }
@@ -69,7 +80,6 @@ function IndexNavbar() {
           <NavbarBrand
             data-placement="bottom"
             href="/index"
-            target="_blank"
             title="Coded by Creative Tim"
           >
             Kamień i Co?
