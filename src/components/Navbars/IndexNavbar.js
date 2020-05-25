@@ -98,7 +98,7 @@ function IndexNavbar() {
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/activities" tag={Link}>
+              <NavLink to="/projects" tag={Link}>
                 Nasze Działania
               </NavLink>
             </NavItem>

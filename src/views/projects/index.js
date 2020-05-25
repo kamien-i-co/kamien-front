@@ -12,9 +12,9 @@ import {
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import StandardHeader from "components/Headers/StandardHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-import { assHistory } from "./index.data";
+import { projects } from "./index.data";
 
-function AboutUs() {
+function ProjectsPage() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");
@@ -22,16 +22,21 @@ function AboutUs() {
       document.body.classList.remove("landing-page");
     };
   });
+
+const renderProject = (p) => (<>
+  <h3>{p.name}</h3>
+  <p>{p.description}</p>
+</>)
   return (
     <>
       <IndexNavbar />
-      <StandardHeader text="O Nas" img="aboutus.jpg"/>
+      <StandardHeader text="Nasze Działania" img="aboutus.jpg"/>
       <div className="section profile-content">
         <Container>
             <Row className="mt-5">
               <Col className="ml-auto mr-auto" md="8">
-                {assHistory.map(text => <p className="mb-4">{text}</p>)}
                 <br />
+                  {projects.map(renderProject)}
               </Col>
             </Row>
           </Container>
@@ -41,4 +46,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default ProjectsPage;

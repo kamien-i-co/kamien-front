@@ -27,12 +27,16 @@ import "assets/demo/demo.css";
 // pages
 import Home from "views/home/index.js";
 import About from "views/about/index";
+import Projects from "views/projects/index";
+import Contact from "views/contact/index";
 // others
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-    <Route path="/about-us" render={props => <About {...props} />} />
+      <Route path="/contact-us" render={props => <Contact {...props} />} />
+      <Route path="/projects" render={props => <Projects {...props} />} />
+      <Route path="/about-us" render={props => <About {...props} />} />
       <Route path="/" render={props => <Home {...props} />} />
     </Switch>
   </BrowserRouter>,

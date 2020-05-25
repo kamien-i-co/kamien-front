@@ -649,3 +649,8 @@
 .filter-landing::after {
   background-color: rgba(0,0,0,.75) !important;
 }
+
+.contact-page-email,
+.contact-page-email:hover {
+  color: rgb(67, 67, 67) 
+}
