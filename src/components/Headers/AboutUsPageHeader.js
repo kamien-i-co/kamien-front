@@ -17,13 +17,13 @@
 
 */
 import React from "react";
+import { Container } from "reactstrap";
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
 
 // core components
 
-function LandingPageHeader() {
+function AboutUsPageHeader() {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {
@@ -40,32 +40,26 @@ function LandingPageHeader() {
     }
   });
 
-  const content = (<>
-  <Container>
-    <div className="motto text-center main-header">
-      <h1>Ratujemy warszawskie zabytki</h1>
-      <br />
-      <Button className="btn-round" color="neutral" type="button" outline>
-        Dowiedz się więcej
-      </Button>
-    </div>
-  </Container>
-  <div className="filter filter-landing" /></>)
-
   return (
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/background.jpg") + ")",
+          backgroundImage:
+            "url(" + require("assets/img/aboutus.jpg") + ")"
         }}
-        className="page-header"
+        className="page-header page-header-xs"
         data-parallax={true}
         ref={pageHeader}
       >
-        {content}
+        <Container>
+          <div className="motto text-center main-header">
+            <h2>O nas</h2>
+          </div>
+        </Container>
+        <div className="filter" />
       </div>
     </>
   );
 }
 
-export default LandingPageHeader;
+export default AboutUsPageHeader;

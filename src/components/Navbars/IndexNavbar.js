@@ -93,11 +93,6 @@ function IndexNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink to="/" tag={Link}>
-                Strona Główna
-              </NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink to="/about-us" tag={Link}>
                 O nas
               </NavLink>
