@@ -3,9 +3,16 @@ import React from "react";
 
 // reactstrap components
 import {
-  Container,
-  Row,
+  Button,
+  Card,
+  CardBody,
+  CardImg,
+  CardSubtitle,
+  CardText,
+  CardTitle,
+  Container, 
   Col,
+  Row, 
 } from "reactstrap";
 
 // core components
@@ -23,6 +30,16 @@ function ProjectsPage() {
     };
   });
 
+const renderProjectCard = (p) => (<Col md="6"><Card style={{cursor: "pointer"}}>
+  <CardImg top width="100%" src={p.mainImg} alt="Card image cap" />
+  <CardBody className="pt-1">
+    <CardTitle><h3>{p.name}</h3> </CardTitle>
+    {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
+    <br />
+    <CardText>{p.description}</CardText>
+  </CardBody>
+</Card></Col>)
+
 const renderProject = (p) => (<>
   <h3>{p.name}</h3>
   <p>{p.description}</p>
@@ -35,8 +52,10 @@ const renderProject = (p) => (<>
         <Container>
             <Row className="mt-5">
               <Col className="ml-auto mr-auto" md="8">
-                <br />
-                  {projects.map(renderProject)}
+                {/* <br /> */}
+                  <Row>
+                  {projects.map(renderProjectCard)}
+                  </Row>
               </Col>
             </Row>
           </Container>
