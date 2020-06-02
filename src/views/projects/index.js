@@ -3,11 +3,9 @@ import React from "react";
 
 // reactstrap components
 import {
-  Button,
   Card,
   CardBody,
   CardImg,
-  CardSubtitle,
   CardText,
   CardTitle,
   Container, 
@@ -20,6 +18,7 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import StandardHeader from "components/Headers/StandardHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import { projects } from "./index.data";
+import ProjectCard from "./ProjectCard"
 
 function ProjectsPage() {
   document.documentElement.classList.remove("nav-open");
@@ -30,20 +29,8 @@ function ProjectsPage() {
     };
   });
 
-const renderProjectCard = (p) => (<Col md="6"><Card style={{cursor: "pointer"}}>
-  <CardImg top width="100%" src={p.mainImg} alt="Card image cap" />
-  <CardBody className="pt-1">
-    <CardTitle><h3>{p.name}</h3> </CardTitle>
-    {/* <CardSubtitle>Card subtitle</CardSubtitle> */}
-    <br />
-    <CardText>{p.description}</CardText>
-  </CardBody>
-</Card></Col>)
+const renderProjectCard = (p) => (<Col md="6"> <ProjectCard project={p} /> </Col>)
 
-const renderProject = (p) => (<>
-  <h3>{p.name}</h3>
-  <p>{p.description}</p>
-</>)
   return (
     <>
       <IndexNavbar />
