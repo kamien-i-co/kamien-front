@@ -104,7 +104,7 @@ function Home() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Chcesz się z nami skontaktować?</h2>
+                <h2 className="text-center">Chcesz u nas działać?</h2>
                 <Form className="contact-form">
                   <Row>
                     <Col md="6">
