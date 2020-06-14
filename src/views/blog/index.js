@@ -12,7 +12,9 @@ import {
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import StandardHeader from "components/Headers/StandardHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
-// import { assHistory } from "./index.data";
+import BlogPost from "./BlogPost";
+
+import {posts} from './blog.data';
 
 function Blog() {
   document.documentElement.classList.remove("nav-open");
@@ -30,7 +32,7 @@ function Blog() {
         <Container>
             <Row className="mt-5">
               <Col className="ml-auto mr-auto" md="8">
-                <br />
+                {posts.map(p => <BlogPost key={p.id} post={p} />)}
               </Col>
             </Row>
           </Container>

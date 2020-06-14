@@ -654,3 +654,13 @@
 .contact-page-email:hover {
   color: rgb(67, 67, 67) 
 }
+
+.post-title {
+  text-align: center;
+  width: 100%;
+}
+
+.post-title--link,
+.post-title--link:hover {
+  color: rgb(51, 51, 51);
+}

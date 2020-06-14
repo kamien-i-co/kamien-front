@@ -1,41 +1,19 @@
-
 import React from "react";
+import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 
-import {
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
+const Image = (props) => (
+  <img {...props} style={{maxWidth: '100%'}} />
+)
 
-// core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import StandardHeader from "components/Headers/StandardHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
-
-function Blog() {
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
+function BlogPost({post}) {
   return (
     <>
-      <IndexNavbar />
-      <StandardHeader text="Blog" img="aboutus.jpg"/>
-      <div className="section profile-content">
-        <Container>
-            <Row className="mt-5">
-              <Col className="ml-auto mr-auto" md="8">
-                <br />
-              </Col>
-            </Row>
-          </Container>
-      </div>
-      <DemoFooter />
-    </>
-  );
+      <h1 className="post-title mb-5">
+        <Link className="post-title--link" href="#" >{post.title}</Link>
+      </h1>
+       <ReactMarkdown source={post.content} renderers={{image: Image}} />
+    </>);
 }
 
-export default Blog;
+export default BlogPost;
