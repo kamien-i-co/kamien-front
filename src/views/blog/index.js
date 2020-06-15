@@ -7,6 +7,8 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import Query from "../../components/Query";
+import ARTICLES_QUERY from ",,/../queries/articles";
 
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
@@ -24,6 +26,15 @@ function Blog() {
       document.body.classList.remove("landing-page");
     };
   });
+  
+  const renderArticles = (
+    <Query query={ARTICLES_QUERY}>
+      {({ data: { articles } }) => {
+        return articles.map(p => <BlogPost key={p.id} post={p} />);
+      }}
+    </Query>
+  )
+
   return (
     <>
       <IndexNavbar />
@@ -32,7 +43,7 @@ function Blog() {
         <Container>
             <Row className="mt-5">
               <Col className="ml-auto mr-auto" md="8">
-                {posts.map(p => <BlogPost key={p.id} post={p} />)}
+                {renderArticles}
               </Col>
             </Row>
           </Container>
