@@ -24,6 +24,9 @@ import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
 import "assets/demo/demo.css";
+
+import { ApolloProvider } from '@apollo/react-hooks';
+import client from "./utils/apolloClient";
 // pages
 import Home from "views/home/index.js";
 import About from "views/about/index";
@@ -33,14 +36,16 @@ import Blog from "views/blog/index";
 // others
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/contact-us" render={props => <Contact {...props} />} />
-      <Route path="/projects" render={props => <Projects {...props} />} />
-      <Route path="/about-us" render={props => <About {...props} />} />
-      <Route path="/blog" render={props => <Blog {...props} />} />
-      <Route path="/" render={props => <Home {...props} />} />
-    </Switch>
-  </BrowserRouter>,
+  <ApolloProvider client={client}>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/contact-us" render={props => <Contact {...props} />} />
+        <Route path="/projects" render={props => <Projects {...props} />} />
+        <Route path="/about-us" render={props => <About {...props} />} />
+        <Route path="/blog" render={props => <Blog {...props} />} />
+        <Route path="/" render={props => <Home {...props} />} />
+      </Switch>
+    </BrowserRouter>
+  </ApolloProvider>,
   document.getElementById("root")
 );
