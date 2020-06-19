@@ -9,6 +9,7 @@ const ARTICLES_QUERY = gql`
         id
         name
       }
+      content
       mainImg {
         url
       }
