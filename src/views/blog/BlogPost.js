@@ -10,7 +10,7 @@ function BlogPost({post}) {
   return (
     <>
       <h1 className="post-title mb-5">
-        <Link className="post-title--link" href="#" >{post.title}</Link>
+        <Link className="post-title--link" to={`blog/articles/${post.id}`}  >{post.title}</Link>
       </h1>
        <ReactMarkdown source={post.content} renderers={{image: Image}} />
     </>);

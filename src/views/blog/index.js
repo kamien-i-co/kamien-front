@@ -1,5 +1,6 @@
 
 import React from "react";
+import { Route } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -16,9 +17,7 @@ import StandardHeader from "components/Headers/StandardHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import BlogPost from "./BlogPost";
 
-import {posts} from './blog.data';
-
-function Blog() {
+function Blog({match}) {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("landing-page");

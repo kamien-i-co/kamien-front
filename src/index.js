@@ -18,7 +18,7 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // styles
 import "assets/css/bootstrap.min.css";
@@ -33,16 +33,18 @@ import About from "views/about/index";
 import Projects from "views/projects/index";
 import Contact from "views/contact/index";
 import Blog from "views/blog/index";
+import SinglePost from "views/blog/singlePost/index";
 // others
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <BrowserRouter>
       <Switch>
-        <Route path="/contact-us" render={props => <Contact {...props} />} />
+        <Route path="/contact-us" render={props => <Contact {...props} />}/>
         <Route path="/projects" render={props => <Projects {...props} />} />
         <Route path="/about-us" render={props => <About {...props} />} />
-        <Route path="/blog" render={props => <Blog {...props} />} />
+        <Route path="/blog/articles/:id" render={props => <SinglePost {...props} />} exact/>
+        <Route path="/blog" render={props => <Blog {...props} />}/>
         <Route path="/" render={props => <Home {...props} />} />
       </Switch>
     </BrowserRouter>
