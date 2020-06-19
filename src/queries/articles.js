@@ -9,7 +9,7 @@ const ARTICLES_QUERY = gql`
         id
         name
       }
-      image {
+      mainImg {
         url
       }
     }

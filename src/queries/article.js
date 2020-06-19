@@ -6,7 +6,7 @@ const ARTICLE_QUERY = gql`
       id
       title
       content
-      image {
+      mainImg {
         url
       }
       tags {
