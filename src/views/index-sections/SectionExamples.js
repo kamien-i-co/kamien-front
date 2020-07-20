@@ -16,10 +16,12 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Button, Container, Row, Col } from "reactstrap";
+import {
+  Button, Container, Row, Col,
+} from 'reactstrap';
 
 // core components
 
@@ -34,8 +36,8 @@ function SectionExamples() {
                 <img
                   alt="..."
                   className="img-rounded img-responsive"
-                  src={require("assets/img/examples/landing-page.png")}
-                  style={{ width: "100%" }}
+                  src={require('assets/img/examples/landing-page.png')}
+                  style={{ width: '100%' }}
                 />
               </a>
               <Button
@@ -52,8 +54,8 @@ function SectionExamples() {
                 <img
                   alt="..."
                   className="img-rounded img-responsive"
-                  src={require("assets/img/examples/profile-page.png")}
-                  style={{ width: "100%" }}
+                  src={require('assets/img/examples/profile-page.png')}
+                  style={{ width: '100%' }}
                 />
               </a>
               <Button
@@ -67,7 +69,8 @@ function SectionExamples() {
             </Col>
           </Row>
         </Container>
-      </div>{" "}
+      </div>
+      {' '}
     </>
   );
 }

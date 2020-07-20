@@ -16,26 +16,25 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
-import { Container } from "reactstrap";
+import React from 'react';
+import { Container } from 'reactstrap';
 
 // reactstrap components
 
 // core components
 
-function StandardHeader({img, text}) {
-  let pageHeader = React.createRef();
+function StandardHeader({ img, text }) {
+  const pageHeader = React.createRef();
 
   React.useEffect(() => {
     if (window.innerWidth < 991) {
       const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
+        const windowScrollTop = window.pageYOffset / 3;
+        pageHeader.current.style.transform = `translate3d(0,${windowScrollTop}px,0)`;
       };
-      window.addEventListener("scroll", updateScroll);
+      window.addEventListener('scroll', updateScroll);
       return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
+        window.removeEventListener('scroll', updateScroll);
       };
     }
   });
@@ -45,10 +44,10 @@ function StandardHeader({img, text}) {
       <div
         style={{
           backgroundImage:
-            "url(" + require(`assets/img/${img}`) + ")"
+            `url(${require(`assets/img/${img}`)})`,
         }}
         className="page-header page-header-xs"
-        data-parallax={true}
+        data-parallax
         ref={pageHeader}
       >
         <Container>

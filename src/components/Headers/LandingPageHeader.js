@@ -16,50 +16,52 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
+import { Button, Container } from 'reactstrap';
 
 // core components
 
 function LandingPageHeader() {
-  let pageHeader = React.createRef();
+  const pageHeader = React.createRef();
 
   React.useEffect(() => {
     if (window.innerWidth < 991) {
       const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
+        const windowScrollTop = window.pageYOffset / 3;
+        pageHeader.current.style.transform = `translate3d(0,${windowScrollTop}px,0)`;
       };
-      window.addEventListener("scroll", updateScroll);
+      window.addEventListener('scroll', updateScroll);
       return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
+        window.removeEventListener('scroll', updateScroll);
       };
     }
   });
 
-  const content = (<>
-  <Container>
-    <div className="motto text-center main-header">
-      <h1>Ratujemy warszawskie zabytki</h1>
-      <br />
-      <Button className="btn-round" color="neutral" type="button" outline>
-        Dowiedz się więcej
-      </Button>
-    </div>
-  </Container>
-  <div className="filter filter-landing" /></>)
+  const content = (
+    <>
+      <Container>
+        <div className="motto text-center main-header">
+          <h1>Ratujemy warszawskie zabytki</h1>
+          <br />
+          <Button className="btn-round" color="neutral" type="button" outline>
+            Dowiedz się więcej
+          </Button>
+        </div>
+      </Container>
+      <div className="filter filter-landing" />
+    </>
+  );
 
   return (
     <>
       <div
         style={{
-          backgroundImage: "url(" + require("assets/img/background.jpg") + ")",
+          backgroundImage: `url(${require('assets/img/background.jpg')})`,
         }}
         className="page-header"
-        data-parallax={true}
+        data-parallax
         ref={pageHeader}
       >
         {content}

@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import {
@@ -31,14 +31,14 @@ import {
   TabPane,
   Container,
   Row,
-  Col
-} from "reactstrap";
+  Col,
+} from 'reactstrap';
 
 // core components
 
 function SectionProgress() {
-  const [activeTab, setActiveTab] = React.useState("1");
-  const toggle = tab => {
+  const [activeTab, setActiveTab] = React.useState('1');
+  const toggle = (tab) => {
     if (activeTab !== tab) {
       setActiveTab(tab);
     }
@@ -94,16 +94,16 @@ function SectionProgress() {
                     <PaginationLink
                       aria-label="Previous"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
-                      <i aria-hidden={true} className="fa fa-angle-left" />
+                      <i aria-hidden className="fa fa-angle-left" />
                       <span className="sr-only">Previous</span>
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       1
                     </PaginationLink>
@@ -111,7 +111,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       2
                     </PaginationLink>
@@ -119,7 +119,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       3
                     </PaginationLink>
@@ -127,7 +127,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       4
                     </PaginationLink>
@@ -135,7 +135,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       5
                     </PaginationLink>
@@ -144,9 +144,9 @@ function SectionProgress() {
                     <PaginationLink
                       aria-label="Next"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
-                      <i aria-hidden={true} className="fa fa-angle-right" />
+                      <i aria-hidden className="fa fa-angle-right" />
                       <span className="sr-only">Next</span>
                     </PaginationLink>
                   </PaginationItem>
@@ -158,7 +158,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                       tabIndex="-1"
                     >
                       Previous
@@ -167,7 +167,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       1
                     </PaginationLink>
@@ -175,7 +175,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       2
                     </PaginationLink>
@@ -183,15 +183,17 @@ function SectionProgress() {
                   <PaginationItem className="active">
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
-                      3 <span className="sr-only">(current)</span>
+                      3
+                      {' '}
+                      <span className="sr-only">(current)</span>
                     </PaginationLink>
                   </PaginationItem>
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       4
                     </PaginationLink>
@@ -199,7 +201,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       5
                     </PaginationLink>
@@ -207,7 +209,7 @@ function SectionProgress() {
                   <PaginationItem>
                     <PaginationLink
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={(e) => e.preventDefault()}
                     >
                       Next
                     </PaginationLink>
@@ -227,9 +229,9 @@ function SectionProgress() {
                   <Nav id="tabs" role="tablist" tabs>
                     <NavItem>
                       <NavLink
-                        className={activeTab === "1" ? "active" : ""}
+                        className={activeTab === '1' ? 'active' : ''}
                         onClick={() => {
-                          toggle("1");
+                          toggle('1');
                         }}
                       >
                         Home
@@ -237,9 +239,9 @@ function SectionProgress() {
                     </NavItem>
                     <NavItem>
                       <NavLink
-                        className={activeTab === "2" ? "active" : ""}
+                        className={activeTab === '2' ? 'active' : ''}
                         onClick={() => {
-                          toggle("2");
+                          toggle('2');
                         }}
                       >
                         Profile
@@ -247,9 +249,9 @@ function SectionProgress() {
                     </NavItem>
                     <NavItem>
                       <NavLink
-                        className={activeTab === "3" ? "active" : ""}
+                        className={activeTab === '3' ? 'active' : ''}
                         onClick={() => {
-                          toggle("3");
+                          toggle('3');
                         }}
                       >
                         Messages
@@ -287,7 +289,8 @@ function SectionProgress() {
             </Col>
           </Row>
         </Container>
-      </div>{" "}
+      </div>
+      {' '}
     </>
   );
 }

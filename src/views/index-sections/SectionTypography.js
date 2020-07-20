@@ -16,10 +16,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col } from 'reactstrap';
 
 // core components
 
@@ -84,7 +84,8 @@ function SectionTypography() {
                 </p>
                 <br />
                 <footer className="blockquote-footer">
-                  Someone famous in{" "}
+                  Someone famous in
+                  {' '}
                   <cite title="source Title">Source Title</cite>
                 </footer>
               </blockquote>
@@ -128,7 +129,9 @@ function SectionTypography() {
             <div className="typography-line">
               <h2>
                 <span className="note">Small tag</span>
-                Header with small subtitle <br />
+                Header with small subtitle
+                {' '}
+                <br />
                 <small>".small" is a tag for the headers</small>
               </h2>
             </div>
@@ -146,14 +149,14 @@ function SectionTypography() {
                 <img
                   alt="..."
                   className="img-rounded img-responsive"
-                  src={require("assets/img/uriel-soberanes.jpg")}
+                  src={require('assets/img/uriel-soberanes.jpg')}
                 />
                 <div className="img-details">
                   <div className="author">
                     <img
                       alt="..."
                       className="img-circle img-no-padding img-responsive"
-                      src={require("assets/img/faces/joe-gardner-2.jpg")}
+                      src={require('assets/img/faces/joe-gardner-2.jpg')}
                     />
                   </div>
                   <p>Sonia Green</p>
@@ -164,7 +167,7 @@ function SectionTypography() {
                 <img
                   alt="..."
                   className="img-circle img-no-padding img-responsive"
-                  src={require("assets/img/faces/kaci-baum-2.jpg")}
+                  src={require('assets/img/faces/kaci-baum-2.jpg')}
                 />
                 <p className="text-center">Brigitte Bardot</p>
               </Col>
@@ -173,7 +176,7 @@ function SectionTypography() {
                 <img
                   alt="..."
                   className="img-thumbnail img-responsive"
-                  src={require("assets/img/faces/erik-lucatero-2.jpg")}
+                  src={require('assets/img/faces/erik-lucatero-2.jpg')}
                 />
                 <p className="text-center">John Keynes</p>
               </Col>

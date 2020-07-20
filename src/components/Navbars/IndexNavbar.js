@@ -16,10 +16,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates strings
-import classnames from "classnames";
-import { Link } from "react-router-dom";
+import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 // reactstrap components
 import {
   Button,
@@ -30,51 +30,51 @@ import {
   NavLink,
   Nav,
   Container,
-} from "reactstrap";
+} from 'reactstrap';
 
-const landingPageScroll = () => document.documentElement.scrollTop > 299 ||
-  document.body.scrollTop > 299;
-const landingElif = () => document.documentElement.scrollTop < 300 ||
-document.body.scrollTop < 300;
+const landingPageScroll = () => document.documentElement.scrollTop > 299
+  || document.body.scrollTop > 299;
+const landingElif = () => document.documentElement.scrollTop < 300
+|| document.body.scrollTop < 300;
 
-const standardScrollCondition = () => document.documentElement.scrollTop > 99 ||
-document.body.scrollTop > 99;
-const standardElifCondition = () => document.documentElement.scrollTop < 100 ||
-document.body.scrollTop < 100
+const standardScrollCondition = () => document.documentElement.scrollTop > 99
+|| document.body.scrollTop > 99;
+const standardElifCondition = () => document.documentElement.scrollTop < 100
+|| document.body.scrollTop < 100;
 
-function IndexNavbar({landing}) {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+function IndexNavbar({ landing }) {
+  const [navbarColor, setNavbarColor] = React.useState('navbar-transparent');
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
-    document.documentElement.classList.toggle("nav-open");
+    document.documentElement.classList.toggle('nav-open');
   };
-  
-  const scrollCondition = () => landing ? landingPageScroll() : standardScrollCondition();
-  const scrollElifCondition = () => landing ? landingElif() : standardElifCondition();
+
+  const scrollCondition = () => (landing ? landingPageScroll() : standardScrollCondition());
+  const scrollElifCondition = () => (landing ? landingElif() : standardElifCondition());
 
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
         scrollCondition()
       ) {
-        setNavbarColor("");
+        setNavbarColor('');
       } else if (
         scrollElifCondition()
       ) {
-        setNavbarColor("navbar-transparent");
+        setNavbarColor('navbar-transparent');
       }
     };
 
-    window.addEventListener("scroll", updateNavbarColor);
+    window.addEventListener('scroll', updateNavbarColor);
 
     return function cleanup() {
-      window.removeEventListener("scroll", updateNavbarColor);
+      window.removeEventListener('scroll', updateNavbarColor);
     };
   });
   return (
-    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
+    <Navbar className={classnames('fixed-top', navbarColor)} expand="lg">
       <Container>
         <div className="navbar-translate">
           <NavbarBrand
@@ -86,8 +86,8 @@ function IndexNavbar({landing}) {
           </NavbarBrand>
           <button
             aria-expanded={navbarCollapse}
-            className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse
+            className={classnames('navbar-toggler navbar-toggler', {
+              toggled: navbarCollapse,
             })}
             onClick={toggleNavbarCollapse}
           >

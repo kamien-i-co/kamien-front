@@ -15,7 +15,7 @@ Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 
 
 Vivamus sagittis auctor molestie. Maecenas sagittis quam dui, a tempus ex volutpat sit amet. Curabitur id efficitur erat, et sodales purus. Suspendisse potenti. Proin fermentum elit non arcu porttitor, vitae pretium urna iaculis. Cras id sagittis nunc. Quisque consequat dignissim felis in convallis. Curabitur consequat elit sed sapien sodales venenatis. Cras faucibus nulla pellentesque finibus sodales.
-`
+`;
 
 const blogpost2 = `
 Morbi id lectus nulla. Pellentesque tortor ipsum, dapibus ac enim ac, viverra egestas mauris.  Duis vel tincidunt turpis. Duis elementum in arcu id dignissim. Suspendisse lobortis, eros sed gravida interdum, nisi ante bibendum eros, sed consequat dolor nisl ut mi.
@@ -36,18 +36,17 @@ Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
 
 
 Vivamus sagittis auctor molestie. Maecenas sagittis quam dui, a tempus ex volutpat sit amet. Curabitur id efficitur erat, et sodales purus. Suspendisse potenti. Proin fermentum elit non arcu porttitor, vitae pretium urna iaculis. Cras id sagittis nunc. Quisque consequat dignissim felis in convallis. Curabitur consequat elit sed sapien sodales venenatis. Cras faucibus nulla pellentesque finibus sodales.
-`
-
+`;
 
 export const posts = [
   {
     id: 1,
-    title: "Nie zapomnimy o Drewnianym Dworcu Wodnym",
-    content: blogpost
+    title: 'Nie zapomnimy o Drewnianym Dworcu Wodnym',
+    content: blogpost,
   },
   {
     id: 2,
-    title: "Waliców 14",
-    content: blogpost2
-  }
-]
+    title: 'Waliców 14',
+    content: blogpost2,
+  },
+];

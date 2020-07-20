@@ -16,10 +16,12 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
+import {
+  Button, Container, Row, Col, UncontrolledTooltip,
+} from 'reactstrap';
 
 // core components
 
@@ -52,7 +54,8 @@ function SectionDownload() {
             <Col className="ml-auto mr-auto" md="8">
               <h2 className="title">Want more?</h2>
               <p className="description">
-                We're going to launch{" "}
+                We're going to launch
+                {' '}
                 <a className="text-danger" href="#pablo" disabled>
                   Paper Kit PRO React in a few weeks
                 </a>
@@ -62,7 +65,8 @@ function SectionDownload() {
             </Col>
             <Col className="ml-auto mr-auto" sm="5">
               <Button className="btn-round" color="info" href="#pablo" disabled>
-                <i aria-hidden={true} className="nc-icon nc-spaceship" />{" "}
+                <i aria-hidden className="nc-icon nc-spaceship" />
+                {' '}
                 Upgrade to PRO
               </Button>
             </Col>
@@ -77,9 +81,11 @@ function SectionDownload() {
                 color="twitter-bg"
                 href="#pablo"
                 id="tooltip3373767"
-                onClick={e => e.preventDefault()}
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fa fa-twitter" /> Twitter
+                <i className="fa fa-twitter" />
+                {' '}
+                Twitter
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip3373767">
                 Tweet!
@@ -89,9 +95,11 @@ function SectionDownload() {
                 color="google-bg"
                 href="#pablo"
                 id="tooltip840791273"
-                onClick={e => e.preventDefault()}
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fa fa-google-plus" /> Google
+                <i className="fa fa-google-plus" />
+                {' '}
+                Google
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip840791273">
                 Share!
@@ -101,9 +109,11 @@ function SectionDownload() {
                 color="facebook-bg"
                 href="#pablo"
                 id="tooltip68961360"
-                onClick={e => e.preventDefault()}
+                onClick={(e) => e.preventDefault()}
               >
-                <i className="fa fa-facebook-square" /> Facebook
+                <i className="fa fa-facebook-square" />
+                {' '}
+                Facebook
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip68961360">
                 Share!
@@ -115,7 +125,9 @@ function SectionDownload() {
                 target="_blank"
                 id="tooltip864353654"
               >
-                <i className="fa fa-github" /> Star
+                <i className="fa fa-github" />
+                {' '}
+                Star
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip864353654">
                 Star on Github

@@ -16,21 +16,21 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import IndexNavbar from 'components/Navbars/IndexNavbar.js';
+import IndexHeader from 'components/Headers/IndexHeader.js';
+import DemoFooter from 'components/Footers/DemoFooter.js';
 
 function Index() {
-  document.documentElement.classList.remove("nav-open");
+  document.documentElement.classList.remove('nav-open');
   React.useEffect(() => {
-    document.body.classList.add("index");
+    document.body.classList.add('index');
     return function cleanup() {
-      document.body.classList.remove("index");
+      document.body.classList.remove('index');
     };
   });
   return (

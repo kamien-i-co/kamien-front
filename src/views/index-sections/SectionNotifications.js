@@ -16,10 +16,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Alert, Container } from "reactstrap";
+import { Alert, Container } from 'reactstrap';
 
 // core components
 
@@ -71,7 +71,9 @@ function SectionNotifications() {
                 <i className="nc-icon nc-simple-remove" />
               </button>
               <div className="message">
-                <i className="nc-icon nc-bell-55" /> This is a notification with
+                <i className="nc-icon nc-bell-55" />
+                {' '}
+                This is a notification with
                 close button and icon.
               </div>
             </div>
@@ -90,7 +92,9 @@ function SectionNotifications() {
                 <i className="nc-icon nc-simple-remove" />
               </button>
               <div className="message">
-                <i className="nc-icon nc-bell-55" /> This is a notification with
+                <i className="nc-icon nc-bell-55" />
+                {' '}
+                This is a notification with
                 close button and icon and have many lines. You can see that the
                 icon and the close button are always vertically aligned. This is
                 a beautiful notification. So you don't have to worry about the

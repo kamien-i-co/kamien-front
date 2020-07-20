@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import {
@@ -27,27 +27,27 @@ import {
   Carousel,
   CarouselItem,
   CarouselIndicators,
-  CarouselCaption
-} from "reactstrap";
+  CarouselCaption,
+} from 'reactstrap';
 
 // core components
 
 const items = [
   {
-    src: require("assets/img/soroush-karimi.jpg"),
-    altText: "Somewhere",
-    caption: "Somewhere"
+    src: require('assets/img/soroush-karimi.jpg'),
+    altText: 'Somewhere',
+    caption: 'Somewhere',
   },
   {
-    src: require("assets/img/federico-beccari.jpg"),
-    altText: "Somewhere else",
-    caption: "Somewhere else"
+    src: require('assets/img/federico-beccari.jpg'),
+    altText: 'Somewhere else',
+    caption: 'Somewhere else',
   },
   {
-    src: require("assets/img/joshua-stannard.jpg"),
-    altText: "Here it is",
-    caption: "Here it is"
-  }
+    src: require('assets/img/joshua-stannard.jpg'),
+    altText: 'Here it is',
+    caption: 'Here it is',
+  },
 ];
 
 function SectionCarousel() {
@@ -69,7 +69,7 @@ function SectionCarousel() {
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
-  const goToIndex = newIndex => {
+  const goToIndex = (newIndex) => {
     if (animating) return;
     setActiveIndex(newIndex);
   };
@@ -90,26 +90,24 @@ function SectionCarousel() {
                     activeIndex={activeIndex}
                     onClickHandler={goToIndex}
                   />
-                  {items.map(item => {
-                    return (
-                      <CarouselItem
-                        onExiting={onExiting}
-                        onExited={onExited}
-                        key={item.src}
-                      >
-                        <img src={item.src} alt={item.altText} />
-                        <CarouselCaption
-                          captionText={item.caption}
-                          captionHeader=""
-                        />
-                      </CarouselItem>
-                    );
-                  })}
+                  {items.map((item) => (
+                    <CarouselItem
+                      onExiting={onExiting}
+                      onExited={onExited}
+                      key={item.src}
+                    >
+                      <img src={item.src} alt={item.altText} />
+                      <CarouselCaption
+                        captionText={item.caption}
+                        captionHeader=""
+                      />
+                    </CarouselItem>
+                  ))}
                   <a
                     className="left carousel-control carousel-control-prev"
                     data-slide="prev"
                     href="#pablo"
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
                       previous();
                     }}
@@ -122,7 +120,7 @@ function SectionCarousel() {
                     className="right carousel-control carousel-control-next"
                     data-slide="next"
                     href="#pablo"
-                    onClick={e => {
+                    onClick={(e) => {
                       e.preventDefault();
                       next();
                     }}
@@ -136,7 +134,8 @@ function SectionCarousel() {
             </Col>
           </Row>
         </Container>
-      </div>{" "}
+      </div>
+      {' '}
     </>
   );
 }

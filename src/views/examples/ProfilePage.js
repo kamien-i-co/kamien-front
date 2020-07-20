@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import {
@@ -31,28 +31,28 @@ import {
   TabPane,
   Container,
   Row,
-  Col
-} from "reactstrap";
+  Col,
+} from 'reactstrap';
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import ExamplesNavbar from 'components/Navbars/ExamplesNavbar.js';
+import ProfilePageHeader from 'components/Headers/ProfilePageHeader.js';
+import DemoFooter from 'components/Footers/DemoFooter.js';
 
 function ProfilePage() {
-  const [activeTab, setActiveTab] = React.useState("1");
+  const [activeTab, setActiveTab] = React.useState('1');
 
-  const toggle = tab => {
+  const toggle = (tab) => {
     if (activeTab !== tab) {
       setActiveTab(tab);
     }
   };
 
-  document.documentElement.classList.remove("nav-open");
+  document.documentElement.classList.remove('nav-open');
   React.useEffect(() => {
-    document.body.classList.add("landing-page");
+    document.body.classList.add('landing-page');
     return function cleanup() {
-      document.body.classList.remove("landing-page");
+      document.body.classList.remove('landing-page');
     };
   });
   return (
@@ -66,12 +66,14 @@ function ProfilePage() {
               <img
                 alt="..."
                 className="img-circle img-no-padding img-responsive"
-                src={require("assets/img/faces/joe-gardner-2.jpg")}
+                src={require('assets/img/faces/joe-gardner-2.jpg')}
               />
             </div>
             <div className="name">
               <h4 className="title">
-                Jane Faker <br />
+                Jane Faker
+                {' '}
+                <br />
               </h4>
               <h6 className="description">Music Producer</h6>
             </div>
@@ -86,7 +88,9 @@ function ProfilePage() {
               </p>
               <br />
               <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Settings
+                <i className="fa fa-cog" />
+                {' '}
+                Settings
               </Button>
             </Col>
           </Row>
@@ -96,9 +100,9 @@ function ProfilePage() {
               <Nav role="tablist" tabs>
                 <NavItem>
                   <NavLink
-                    className={activeTab === "1" ? "active" : ""}
+                    className={activeTab === '1' ? 'active' : ''}
                     onClick={() => {
-                      toggle("1");
+                      toggle('1');
                     }}
                   >
                     Follows
@@ -106,9 +110,9 @@ function ProfilePage() {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    className={activeTab === "2" ? "active" : ""}
+                    className={activeTab === '2' ? 'active' : ''}
                     onClick={() => {
-                      toggle("2");
+                      toggle('2');
                     }}
                   >
                     Following
@@ -129,12 +133,14 @@ function ProfilePage() {
                           <img
                             alt="..."
                             className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
+                            src={require('assets/img/faces/clem-onojeghuo-2.jpg')}
                           />
                         </Col>
                         <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
                           <h6>
-                            Flume <br />
+                            Flume
+                            {' '}
+                            <br />
                             <small>Musical Producer</small>
                           </h6>
                         </Col>
@@ -159,12 +165,14 @@ function ProfilePage() {
                           <img
                             alt="..."
                             className="img-circle img-no-padding img-responsive"
-                            src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
+                            src={require('assets/img/faces/ayo-ogunseinde-2.jpg')}
                           />
                         </Col>
                         <Col lg="7" md="4" xs="4">
                           <h6>
-                            Banks <br />
+                            Banks
+                            {' '}
+                            <br />
                             <small>Singer</small>
                           </h6>
                         </Col>

@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 const ARTICLES_QUERY = gql`
   query Articles {

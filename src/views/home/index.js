@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import {
@@ -28,29 +28,29 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
-} from "reactstrap";
+  Col,
+} from 'reactstrap';
 
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import IndexNavbar from 'components/Navbars/IndexNavbar.js';
+import LandingPageHeader from 'components/Headers/LandingPageHeader.js';
+import DemoFooter from 'components/Footers/DemoFooter.js';
 
-import {description, activities, posts } from './index.data';
+import { description, activities, posts } from './index.data';
 import BlogPost from './BlogPost';
-import Activity from './Activity'
+import Activity from './Activity';
 
 function Home() {
-  document.documentElement.classList.remove("nav-open");
+  document.documentElement.classList.remove('nav-open');
   React.useEffect(() => {
-    document.body.classList.add("profile-page");
+    document.body.classList.add('profile-page');
     return function cleanup() {
-      document.body.classList.remove("profile-page");
+      document.body.classList.remove('profile-page');
     };
   });
 
-  const renderActivities = activities.map((a) => <Col md="3"><Activity activity={a}/></Col>)
-  const renderBlogPosts = posts.map((p) => <Col md="4"><BlogPost post={p}/></Col>)
+  const renderActivities = activities.map((a) => <Col md="3"><Activity activity={a} /></Col>);
+  const renderBlogPosts = posts.map((p) => <Col md="4"><BlogPost post={p} /></Col>);
   return (
     <>
       <IndexNavbar landing />
@@ -69,13 +69,13 @@ function Home() {
                   className="btn-round"
                   color="info"
                   href="#pablo"
-                  onClick={e => e.preventDefault()}
+                  onClick={(e) => e.preventDefault()}
                 >
                   Więcej
                 </Button>
               </Col>
             </Row>
-            
+
             <br />
             <br />
             <Container>
@@ -90,11 +90,11 @@ function Home() {
                 {renderBlogPosts}
               </Row>
               <Button
-                  className="btn-round"
-                  color="info"
-                  href="/blog"
-                  onClick={e => e.preventDefault()}
-                >
+                className="btn-round"
+                color="info"
+                href="/blog"
+                onClick={(e) => e.preventDefault()}
+              >
                 Więcej wpisów
               </Button>
             </Container>

@@ -16,20 +16,22 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Button, Card, Form, Input, Container, Row, Col } from "reactstrap";
+import {
+  Button, Card, Form, Input, Container, Row, Col,
+} from 'reactstrap';
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
+import ExamplesNavbar from 'components/Navbars/ExamplesNavbar.js';
 
 function RegisterPage() {
-  document.documentElement.classList.remove("nav-open");
+  document.documentElement.classList.remove('nav-open');
   React.useEffect(() => {
-    document.body.classList.add("register-page");
+    document.body.classList.add('register-page');
     return function cleanup() {
-      document.body.classList.remove("register-page");
+      document.body.classList.remove('register-page');
     };
   });
   return (
@@ -38,7 +40,7 @@ function RegisterPage() {
       <div
         className="page-header"
         style={{
-          backgroundImage: "url(" + require("assets/img/login-image.jpg") + ")"
+          backgroundImage: `url(${require('assets/img/login-image.jpg')})`,
         }}
       >
         <div className="filter" />
@@ -52,7 +54,7 @@ function RegisterPage() {
                     className="btn-neutral btn-just-icon mr-1"
                     color="facebook"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-facebook-square" />
                   </Button>
@@ -60,7 +62,7 @@ function RegisterPage() {
                     className="btn-neutral btn-just-icon mr-1"
                     color="google"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-google-plus" />
                   </Button>
@@ -68,7 +70,7 @@ function RegisterPage() {
                     className="btn-neutral btn-just-icon"
                     color="twitter"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-twitter" />
                   </Button>
@@ -87,7 +89,7 @@ function RegisterPage() {
                     className="btn-link"
                     color="danger"
                     href="#pablo"
-                    onClick={e => e.preventDefault()}
+                    onClick={(e) => e.preventDefault()}
                   >
                     Forgot password?
                   </Button>
@@ -98,8 +100,14 @@ function RegisterPage() {
         </Container>
         <div className="footer register-footer text-center">
           <h6>
-            © {new Date().getFullYear()}, made with{" "}
-            <i className="fa fa-heart heart" /> by Creative Tim
+            ©
+            {' '}
+            {new Date().getFullYear()}
+            , made with
+            {' '}
+            <i className="fa fa-heart heart" />
+            {' '}
+            by Creative Tim
           </h6>
         </div>
       </div>

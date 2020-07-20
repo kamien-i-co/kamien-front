@@ -16,9 +16,9 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 // react plugin used to create datetimepicker
-import ReactDatetime from "react-datetime";
+import ReactDatetime from 'react-datetime';
 
 // reactstrap components
 import {
@@ -34,8 +34,8 @@ import {
   UncontrolledTooltip,
   PopoverBody,
   PopoverHeader,
-  UncontrolledPopover
-} from "reactstrap";
+  UncontrolledPopover,
+} from 'reactstrap';
 
 // core components
 
@@ -75,7 +75,7 @@ function SectionJavaScript() {
                     type="button"
                     onClick={toggleModal}
                   >
-                    <span aria-hidden={true}>×</span>
+                    <span aria-hidden>×</span>
                   </button>
                   <h5
                     className="modal-title text-center"
@@ -126,7 +126,7 @@ function SectionJavaScript() {
                 color="danger"
                 id="tooltip344834141"
                 outline
-                onClick={e => e.target.focus()}
+                onClick={(e) => e.target.focus()}
               >
                 On top
               </Button>
@@ -145,7 +145,7 @@ function SectionJavaScript() {
                 color="danger"
                 id="tooltip493417725"
                 outline
-                onClick={e => e.target.focus()}
+                onClick={(e) => e.target.focus()}
               >
                 On bottom
               </Button>
@@ -164,12 +164,12 @@ function SectionJavaScript() {
                 color="danger"
                 id="tooltip746845223"
                 outline
-                onClick={e => e.target.focus()}
+                onClick={(e) => e.target.focus()}
               >
                 On left
               </Button>
               <UncontrolledPopover
-                placement={window.innerWidth < 768 ? "top" : "left"}
+                placement={window.innerWidth < 768 ? 'top' : 'left'}
                 target="tooltip746845223"
                 trigger="focus"
               >
@@ -183,12 +183,12 @@ function SectionJavaScript() {
                 color="danger"
                 id="tooltip909471006"
                 outline
-                onClick={e => e.target.focus()}
+                onClick={(e) => e.target.focus()}
               >
                 On right
               </Button>
               <UncontrolledPopover
-                placement={window.innerWidth < 768 ? "top" : "right"}
+                placement={window.innerWidth < 768 ? 'top' : 'right'}
                 target="tooltip909471006"
                 trigger="focus"
               >
@@ -209,13 +209,13 @@ function SectionJavaScript() {
                     <InputGroup className="date" id="datetimepicker">
                       <ReactDatetime
                         inputProps={{
-                          placeholder: "Datetime Picker Here"
+                          placeholder: 'Datetime Picker Here',
                         }}
                       />
                       <InputGroupAddon addonType="append">
                         <InputGroupText>
                           <span className="glyphicon glyphicon-calendar">
-                            <i aria-hidden={true} className="fa fa-calendar" />
+                            <i aria-hidden className="fa fa-calendar" />
                           </span>
                         </InputGroupText>
                       </InputGroupAddon>
@@ -294,7 +294,8 @@ function SectionJavaScript() {
             <h3>Carousel</h3>
           </div>
         </Container>
-      </div>{" "}
+      </div>
+      {' '}
     </>
   );
 }

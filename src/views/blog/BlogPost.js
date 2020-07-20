@@ -1,20 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 const Image = (props) => (
-  <img {...props} style={{maxWidth: '100%'}} />
-)
+  <img {...props} style={{ maxWidth: '100%' }} />
+);
 
-function BlogPost({post}) {
+function BlogPost({ post }) {
   return (
     <>
       <h1 className="post-title mb-5">
-        <Link className="post-title--link" to={`blog/articles/${post.id}`}  >{post.title}</Link>
+        <Link className="post-title--link" to={`blog/articles/${post.id}`}>{post.title}</Link>
       </h1>
-       <ReactMarkdown source={post.content} renderers={{image: Image}} />
-    </>);
+      <ReactMarkdown source={post.content} renderers={{ image: Image }} />
+    </>
+  );
 }
-
 
 export default BlogPost;

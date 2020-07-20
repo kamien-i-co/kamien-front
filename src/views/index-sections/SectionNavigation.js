@@ -16,7 +16,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
 import {
@@ -26,8 +26,8 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Container
-} from "reactstrap";
+  Container,
+} from 'reactstrap';
 
 // core components
 
@@ -45,12 +45,12 @@ function SectionNavigation() {
             className="navigation-example"
             style={{
               backgroundImage:
-                "url(" + require("assets/img/ilya-yakover.jpg") + ")"
+                `url(${require('assets/img/ilya-yakover.jpg')})`,
             }}
           >
             <Navbar className="bg-primary" expand="lg">
               <Container>
-                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
                   Primary Color
                 </NavbarBrand>
                 <button
@@ -70,27 +70,27 @@ function SectionNavigation() {
                 <UncontrolledCollapse navbar toggler="#navbar-primary">
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="nc-icon nc-compass-05"
                         />
                          Discover
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="nc-icon nc-single-02"
                         />
                          Profile
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="nc-icon nc-settings-gear-65"
                         />
                          Settings
@@ -102,7 +102,7 @@ function SectionNavigation() {
             </Navbar>
             <Navbar className="bg-info" expand="lg">
               <Container>
-                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
                   Info Color
                 </NavbarBrand>
                 <button
@@ -122,17 +122,17 @@ function SectionNavigation() {
                 <UncontrolledCollapse navbar toggler="#navbar-info">
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         Discover
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         Profile
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         Settings
                       </NavLink>
                     </NavItem>
@@ -142,12 +142,12 @@ function SectionNavigation() {
             </Navbar>
             <Navbar className="bg-success" expand="lg">
               <Container>
-                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
                   Success Color
                 </NavbarBrand>
                 <button
                   aria-controls="navbarNav"
-                  aria-expanded={true}
+                  aria-expanded
                   aria-label="Toggle navigation"
                   className="navbar-toggler navbar-toggler-right"
                   data-target="#navbar-success"
@@ -166,25 +166,25 @@ function SectionNavigation() {
                 >
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="nc-icon nc-compass-05"
                         />
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="nc-icon nc-single-02"
                         />
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="nc-icon nc-settings-gear-65"
                         />
                       </NavLink>
@@ -195,7 +195,7 @@ function SectionNavigation() {
             </Navbar>
             <Navbar className="bg-warning" expand="lg">
               <Container>
-                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
                   Warning Color
                 </NavbarBrand>
                 <button
@@ -215,26 +215,26 @@ function SectionNavigation() {
                 <UncontrolledCollapse navbar toggler="#navbar-warning">
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="fa fa-facebook-official"
                         />
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                        <i aria-hidden={true} className="fa fa-twitter" />
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <i aria-hidden className="fa fa-twitter" />
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                        <i aria-hidden={true} className="fa fa-google-plus" />
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <i aria-hidden className="fa fa-google-plus" />
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                        <i aria-hidden={true} className="fa fa-instagram" />
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <i aria-hidden className="fa fa-instagram" />
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -243,12 +243,12 @@ function SectionNavigation() {
             </Navbar>
             <Navbar className="bg-danger" expand="lg">
               <Container>
-                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
                   Danger Color
                 </NavbarBrand>
                 <button
                   aria-controls="navbarNav"
-                  aria-expanded={true}
+                  aria-expanded
                   aria-label="Toggle navigation"
                   className="navbar-toggler navbar-toggler-right"
                   data-target="#navbar-danger"
@@ -267,23 +267,23 @@ function SectionNavigation() {
                 >
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="fa fa-facebook-official"
                         />
                         Share
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                        <i aria-hidden={true} className="fa fa-twitter" />
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <i aria-hidden className="fa fa-twitter" />
                         Tweet
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                        <i aria-hidden={true} className="fa fa-pinterest" />
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <i aria-hidden className="fa fa-pinterest" />
                         Pin
                       </NavLink>
                     </NavItem>
@@ -293,7 +293,7 @@ function SectionNavigation() {
             </Navbar>
             <Navbar className="navbar-transparent pt-0" expand="lg">
               <Container>
-                <NavbarBrand href="#pablo" onClick={e => e.preventDefault()}>
+                <NavbarBrand href="#pablo" onClick={(e) => e.preventDefault()}>
                   Transparent
                 </NavbarBrand>
                 <button
@@ -313,23 +313,23 @@ function SectionNavigation() {
                 <UncontrolledCollapse navbar toggler="#navbar-transparent">
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
                         <i
-                          aria-hidden={true}
+                          aria-hidden
                           className="fa fa-facebook-official"
                         />
                         Facebook
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                        <i aria-hidden={true} className="fa fa-twitter" />
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <i aria-hidden className="fa fa-twitter" />
                         Twitter
                       </NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="#pablo" onClick={e => e.preventDefault()}>
-                        <i aria-hidden={true} className="fa fa-instagram" />
+                      <NavLink href="#pablo" onClick={(e) => e.preventDefault()}>
+                        <i aria-hidden className="fa fa-instagram" />
                         Instagram
                       </NavLink>
                     </NavItem>
@@ -339,7 +339,8 @@ function SectionNavigation() {
             </Navbar>
           </div>
         </div>
-      </div>{" "}
+      </div>
+      {' '}
     </>
   );
 }
