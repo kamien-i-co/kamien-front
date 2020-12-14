@@ -45,7 +45,7 @@ function LandingPageHeader() {
         <div className="motto text-center main-header">
           <h1>Ratujemy warszawskie zabytki</h1>
           <br />
-          <Button className="btn-round" color="neutral" type="button" outline>
+          <Button className="btn-round" color="neutral" type="button" outline href="#about">
             Dowiedz się więcej
           </Button>
         </div>

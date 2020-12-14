@@ -3,12 +3,12 @@ import React from 'react';
 function Activity({ activity }) {
   return (
     <div className="info">
-      <div className={`icon ${activity.icon}`}>
-        <i className="nc-icon nc-album-2" />
+      <div className={`icon info`}>
+        <i className={`nc-icon ${activity.icon}`} />
       </div>
       <div className="description">
         <h4 className="info-title">{activity.name}</h4>
-        <p className="description">
+        <p className="description mt-2">
           {activity.description}
         </p>
       </div>

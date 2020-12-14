@@ -56,11 +56,11 @@ function Home() {
       <IndexNavbar landing />
       <LandingPageHeader />
       <div className="main">
-        <div className="section text-center">
+        <div id="about" className="section text-center">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">O stowarzyszeniu</h2>
+                <h2 className="title mb-5">O stowarzyszeniu</h2>
                 <h5 className="description">
                   {description}
                 </h5>
@@ -68,8 +68,7 @@ function Home() {
                 <Button
                   className="btn-round"
                   color="info"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
+                  href="about-us"
                 >
                   Więcej
                 </Button>
@@ -78,13 +77,13 @@ function Home() {
 
             <br />
             <br />
-            <Container>
-              <h2 className="title">Nasze Działania</h2>
+            <Container className="mb-5">
+              <h2 className="title mb-5">Co robimy?</h2>
               <Row>
                 {renderActivities}
               </Row>
             </Container>
-            <Container>
+            {/* <Container>
               <h2 className="title">Najnowsze wpisy na blogu</h2>
               <Row>
                 {renderBlogPosts}
@@ -97,7 +96,7 @@ function Home() {
               >
                 Więcej wpisów
               </Button>
-            </Container>
+            </Container> */}
           </Container>
         </div>
       </div>

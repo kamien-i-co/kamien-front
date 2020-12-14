@@ -1,33 +1,34 @@
-export const description = `This is the paragraph where you can write more details about
-your product. Keep you user engaged by providing meaningful
-information. Remember that by this time, the user is curious,
-otherwise he wouldn't scroll to get here. Add a button if you
-want the user to see more.`;
+export const description = `
+  Działamy od 2017 roku i walczymy o zachowanie dziedzictwa kulturowego Warszawy.
+  Naszym szczególnym zainteresowaniem cieszą się obiekty zabytkowe,
+  które nie zostały objęte ochorną konserwatorską.
+  Oprócz tego angazujemy się w wiele innych inicjatyw, o których mozecie przeczytać na naszej stronie.
+`;
 
 export const activities = [
   {
     id: 1,
-    name: 'Ochrona Zabytków',
-    description: '...',
-    icon: 'info',
+    name: 'Chronimy Zabytki',
+    description: 'Podstawowe działanie stowarzyszenia. Naszym zdaniem kazdy obiekt, ktory jest wartosciowy z punktu widzenia historii Warszawy powinien byc objety ochroną konserwatorską.',
+    icon: 'nc-bank',
   },
   {
     id: 2,
-    name: 'Drewniaki',
-    description: '...',
-    icon: 'info',
+    name: 'Tworzymy mapy',
+    description: 'Aktualnie zbieramy dane dla mapy warszawskim drewniakow. Oprócz tego opracowaliśmy mapę oznaczeń saperskich',
+    icon: 'nc-map-big',
   },
   {
     id: 3,
-    name: 'Zagrozone Dziedzictwo Warszawy',
-    description: '...',
-    icon: 'info',
+    name: 'Organizujemy wystawy',
+    description: 'Zorganizowaliśmy juz trzy wystawy dotyczące historycznego dziedzictwa wystawy. Niedlugo materiały z nich będzie mozna podziwiac na naszej stronie',
+    icon: 'nc-album-2',
   },
   {
     id: 3,
-    name: 'Hala Gwardii',
-    description: '...',
-    icon: 'info',
+    name: 'Działamy z innymi stowarzyszeniami',
+    description: 'Zabytki łączą a nie dzielą. Dlatego wielokrotnie łączymy siły z innymi organizacjami, aby ochronić dany obiekt.',
+    icon: 'nc-world-2',
   },
 ];
 
