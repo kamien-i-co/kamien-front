@@ -112,11 +112,11 @@ function IndexNavbar({ landing }) {
                 Nasze Działania
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink to="/blog" tag={Link}>
                 Blog
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink to="/contact-us" tag={Link}>
                 Kontakt
