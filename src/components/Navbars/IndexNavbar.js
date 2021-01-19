@@ -112,11 +112,11 @@ function IndexNavbar({ landing }) {
                 Nasze Działania
               </NavLink>
             </NavItem> */}
-            {/* <NavItem>
-              <NavLink to="/blog" tag={Link}>
+            <NavItem>
+              <NavLink to={{ pathname: "https://kamienico.medium.com/"  }} target="_blank"  tag={Link}>
                 Blog
               </NavLink>
-            </NavItem> */}
+            </NavItem>
             <NavItem>
               <NavLink to="/contact-us" tag={Link}>
                 Kontakt
